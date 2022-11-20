@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+VERSION='0.0.0'
+
+root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)
+
+source "$root/.bpan/lib/bpan.bash" --app
+
+bpan:source bashplus +err +git +sys
+
+bpan:source getopt "\
+$app [<options>] <cmd>
+
+Like git rev-parse but using sha512
+
+Options:
+--
+h,help        Show the command summary
+V,version     Display $app version
+x,debug       Print lots of debugging info
+"
+
+main() (
+  +git:in-repo ||
+    error "No inside a git repository"
+
+  getopt "$@"
+  set -- "${args[@]}"
+
+  [[ $* ]] || set -- HEAD
+
+  for ref; do
+    sha512 "$ref"
+  done
+)
+
+sha512() (
+  {
+    printf 'commit %s\0' "$(
+      git --no-replace-objects cat-file commit "$1" | wc -c
+    )"
+    git cat-file commit "$ref"
+  } |
+    sha512sum |
+    cut -d' ' -f1
+)
+
+main "$@"
