@@ -1,3 +1,7 @@
+[version "0.1.1"]
+date = Tue Nov 22 03:18:31 PM PST 2022
+done = Use readlink -f
+
 [version "0.1.0"]
 date = Sun Nov 20 12:16:17 PM PST 2022
 done = Add test for CLI usage
