@@ -7,9 +7,11 @@ version = 0.1.1
 title = Like 'git rev-parse' but using sha512
 license = MIT
 copyright = 2022
-repo = https://github.com/ingydotnet/git-sha512
-branch = main
 tag = bash bpan
+
+owner = ingydotnet
+source = https://github.com/$package.owner/$package.name
+branch = main
 
 bug = $package.repo/issues/
 site = $package.repo
