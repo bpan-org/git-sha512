@@ -3,14 +3,13 @@ version = 0.1.106
 updated = 2022-12-30T19:08:17Z
 
 [package]
-name = git-sha512
+id = github:bpan-org/git-sha512
 version = 0.1.4
 title = Like 'git rev-parse' but using sha512
 license = MIT
 copyright = 2022
-type = bash-bin
+type = bash:bin
 
-bug = https://github.com/bpan-org/git-sha512/issues/
 irc = irc.libera.chat/bpan
 
 [author "github:ingydotnet"]
