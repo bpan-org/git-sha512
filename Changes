@@ -1,3 +1,7 @@
+[version "0.1.5"]
+date = 2022-12-31T12:47:35Z
+done = Config changes
+
 [version "0.1.4"]
 date = 2022-12-30T19:08:17Z
 done = Update bpan assets
