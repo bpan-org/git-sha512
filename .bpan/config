@@ -1,10 +1,10 @@
 [bpan]
 version = 0.1.106
-updated = 2022-12-30T18:14:38Z
+updated = 2022-12-30T19:08:17Z
 
 [package]
 name = git-sha512
-version = 0.1.3
+version = 0.1.4
 title = Like 'git rev-parse' but using sha512
 license = MIT
 copyright = 2022
