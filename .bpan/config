@@ -7,7 +7,7 @@ id = github:bpan-org/git-sha512
 version = 0.1.5
 title = Like 'git rev-parse' but using sha512
 license = MIT
-copyright = 2022
+copyright = 2022-2023
 type = bash:bin
 
 irc = irc.libera.chat/bpan
@@ -19,7 +19,6 @@ irc = ingy@irc.libera.chat
 matrix = @ingy:yaml.io
 
 [require "command"]
-bash = 3.2+
 git = 2.9+
 
 [update]
